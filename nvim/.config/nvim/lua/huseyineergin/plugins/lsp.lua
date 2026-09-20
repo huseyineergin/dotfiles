@@ -16,6 +16,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"bashls",
+				"jsonls",
 				"lua_ls",
 				"stylua",
 				"vimls",

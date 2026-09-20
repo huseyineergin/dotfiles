@@ -14,6 +14,16 @@ return {
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 			},
+			formatters = {
+				prettier = {
+					args = {
+						"--trailing-comma",
+						"none",
+						"--stdin-filepath",
+						"$FILENAME",
+					},
+				},
+			},
 			format_on_save = {
 				timeout_ms = 500,
 				lsp_format = "fallback",
