@@ -49,6 +49,12 @@ alias mkdir="mkdir -p"
 alias ll="ls -lFh"
 alias la="ls -lAFh"
 
+# Interactive DNF
+if command -v fzf >/dev/null 2>&1; then
+	alias dnff="dnf --quiet list --available | cut -d ' ' -f 1 | grep '\.' | fzf --multi --preview 'dnf info {1}' --preview-window=down:75% | xargs -ro sudo dnf install"
+	alias dnfr="dnf --quiet list --installed | cut -d ' ' -f 1 | grep '\.' | fzf --multi --preview 'dnf info {1}' --preview-window=down:75% | xargs -ro sudo dnf remove"
+fi
+
 # Disable Bell
 if [[ $iatest -gt 0 ]]; then bind "set bell-style none"; fi
 
