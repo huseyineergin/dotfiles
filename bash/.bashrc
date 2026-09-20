@@ -63,3 +63,9 @@ if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
 
 # Show Auto-Completion List Automatically
 if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous on"; fi
+
+# Starship
+if [[ $iatest -gt 0 ]] && command -v starship >/dev/null 2>&1; then
+	export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+	eval "$(starship init bash)"
+fi

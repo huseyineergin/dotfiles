@@ -1,0 +1,54 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+${custom.user_host}\
+[](fg:color_blue_light bg:color_blue_slate)\
+$directory\
+[](fg:color_blue_slate bg:color_blue_dark)\
+$git_branch\
+$git_status\
+[](fg:color_blue_dark bg:color_blue_deep)\
+$time\
+[](fg:color_blue_deep)\
+\n$character
+"""
+
+# https://lospec.com/palette-list/aerugo
+palette = "aerugo"
+
+[palettes.aerugo]
+color_blue_light = "#87d1ef"
+color_blue_slate = "#64a1c2"
+color_blue_dark = "#466480"
+color_blue_deep = "#2f485c"
+
+[custom.user_host]
+command = "printf '%s@%s' $USER $(hostname -s)"
+when = true
+style = "bg:color_blue_light"
+format = "[ $output ]($style)"
+
+[directory]
+style = "bg:color_blue_slate"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+style = "bg:color_blue_dark"
+format = "[ $branch ]($style)"
+
+[git_status]
+style = "bg:color_blue_dark"
+format = "[$all_status$ahead_behind ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_blue_deep"
+format = "[ $time ]($style)"
+
+[character]
+success_symbol = "❯"
+error_symbol = "✗"
+vimcmd_symbol = "❮"

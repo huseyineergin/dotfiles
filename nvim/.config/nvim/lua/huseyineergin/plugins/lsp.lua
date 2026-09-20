@@ -19,6 +19,7 @@ return {
 				"jsonls",
 				"lua_ls",
 				"stylua",
+				"taplo",
 				"vimls",
 			},
 			automatic_enable = true,

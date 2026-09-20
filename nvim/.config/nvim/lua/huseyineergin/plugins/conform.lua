@@ -12,6 +12,7 @@ return {
 				json = { "prettier" },
 				jsonc = { "prettier" },
 				yaml = { "prettier" },
+				toml = { "taplo" },
 				markdown = { "prettier" },
 			},
 			formatters = {
