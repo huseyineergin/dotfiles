@@ -19,14 +19,14 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- to the top
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- to the bottom
 
 -- window management
-vim.keymap.set("n", "<leader>sv", "<C-w>v")                 -- split vertically
-vim.keymap.set("n", "<leader>sh", "<C-w>s")                 -- split horizontally
-vim.keymap.set("n", "<leader>se", "<C-w>=")                 -- make splits equal size
-vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>")         -- close current split
+vim.keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
+vim.keymap.set("n", "<leader>sh", "<C-w>s") -- split horizontally
+vim.keymap.set("n", "<leader>se", "<C-w>=") -- make splits equal size
+vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>") -- close current split
 
-vim.keymap.set("n", "<C-Up>", "<cmd>resize +1<CR>")         -- increase size horizontally
-vim.keymap.set("n", "<C-Down>", "<cmd>resize -1<CR>")       -- decrease size horizontally
-vim.keymap.set("n", "<C-Left>", "<cmd>vert resize -1<CR>")  -- decrease size vertically
+vim.keymap.set("n", "<C-Up>", "<cmd>resize +1<CR>") -- increase size horizontally
+vim.keymap.set("n", "<C-Down>", "<cmd>resize -1<CR>") -- decrease size horizontally
+vim.keymap.set("n", "<C-Left>", "<cmd>vert resize -1<CR>") -- decrease size vertically
 vim.keymap.set("n", "<C-Right>", "<cmd>vert resize +1<CR>") -- increase size vertically
 
 -- delete without saving the value
