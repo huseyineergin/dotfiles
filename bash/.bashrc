@@ -69,3 +69,8 @@ if [[ $iatest -gt 0 ]] && command -v starship >/dev/null 2>&1; then
 	export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 	eval "$(starship init bash)"
 fi
+
+# TMUX
+if command -v tmux >/dev/null 2>&1 && [[ $iatest -gt 0 ]] && [ -z "$TMUX" ]; then
+	tmux new-session -A -s main
+fi
