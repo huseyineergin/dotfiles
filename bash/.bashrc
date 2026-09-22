@@ -70,6 +70,12 @@ if [[ $iatest -gt 0 ]] && command -v starship >/dev/null 2>&1; then
 	eval "$(starship init bash)"
 fi
 
+# Zoxide
+if [[ $- == *i* ]] && command -v zoxide >/dev/null 2>&1; then
+	alias z="zoxide"
+	eval "$(zoxide init bash)"
+fi
+
 # TMUX
 if command -v tmux >/dev/null 2>&1 && [[ $iatest -gt 0 ]] && [ -z "$TMUX" ]; then
 	tmux new-session -A -s main
