@@ -48,9 +48,9 @@ fi
 alias cp="cp -i"
 alias mv="mv -i"
 alias ..="cd .."
-alias mkdir="mkdir -p"
 alias ll="ls -lFh"
 alias la="ls -lAFh"
+alias mkdir="mkdir -p"
 
 # Interactive DNF
 if command -v fzf >/dev/null 2>&1; then
@@ -74,12 +74,12 @@ if [[ $iatest -gt 0 ]] && command -v starship >/dev/null 2>&1; then
 fi
 
 # Zoxide
-if [[ $- == *i* ]] && command -v zoxide >/dev/null 2>&1; then
+if [[ $iatest -gt 0 ]] && command -v zoxide >/dev/null 2>&1; then
 	alias z="zoxide"
 	eval "$(zoxide init bash)"
 fi
 
 # TMUX
-if command -v tmux >/dev/null 2>&1 && [[ $iatest -gt 0 ]] && [ -z "$TMUX" ]; then
+if [[ $iatest -gt 0 ]] && command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
 	tmux new-session -A -s main
 fi
