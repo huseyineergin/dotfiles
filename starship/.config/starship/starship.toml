@@ -2,13 +2,11 @@
 
 format = """
 ${custom.user_host}\
-[](fg:color_blue_light bg:color_blue_slate)\
-$directory\
 [](fg:color_blue_slate bg:color_blue_dark)\
+$directory\
+[](fg:color_blue_dark bg:color_blue_deep)\
 $git_branch\
 $git_status\
-[](fg:color_blue_dark bg:color_blue_deep)\
-$time\
 [](fg:color_blue_deep)\
 \n$character
 """
@@ -17,7 +15,6 @@ $time\
 palette = "aerugo"
 
 [palettes.aerugo]
-color_blue_light = "#87d1ef"
 color_blue_slate = "#64a1c2"
 color_blue_dark = "#466480"
 color_blue_deep = "#2f485c"
@@ -25,21 +22,21 @@ color_blue_deep = "#2f485c"
 [custom.user_host]
 command = "printf '%s@%s' $USER $(hostname -s)"
 when = true
-style = "bg:color_blue_light"
+style = "bg:color_blue_slate"
 format = "[ $output ]($style)"
 
 [directory]
-style = "bg:color_blue_slate"
+style = "bg:color_blue_dark"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-style = "bg:color_blue_dark"
+style = "bg:color_blue_deep"
 format = "[ $branch ]($style)"
 
 [git_status]
-style = "bg:color_blue_dark"
+style = "bg:color_blue_deep"
 format = "[$all_status$ahead_behind ]($style)"
 
 [time]
