@@ -1,2 +1,1 @@
-require("huseyineergin.core")
-require("huseyineergin.lazy")
+require("config")
