@@ -18,6 +18,11 @@ vim.opt.incsearch = true
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
+vim.opt.foldcolumn = "1"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
