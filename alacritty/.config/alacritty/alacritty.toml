@@ -4,6 +4,7 @@ live_config_reload = true
 [window]
 dimensions = { columns = 120, lines = 30 }
 opacity = 0.95
+startup_mode = "Maximized"
 
 [font]
 normal = { family = "JetBrainsMono NF", style = "Regular" }
