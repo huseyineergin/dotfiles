@@ -8,9 +8,9 @@ return {
 		require("oil").setup({
 			use_default_keymaps = false,
 			keymaps = {
-				["gr"] = "actions.refresh",
-				["<CR>"] = "actions.select",
 				["g?"] = "actions.show_help",
+				["<CR>"] = "actions.select",
+				["gr"] = "actions.refresh",
 				["gs"] = "actions.change_sort",
 				["gx"] = "actions.open_external",
 				["g."] = "actions.toggle_hidden",

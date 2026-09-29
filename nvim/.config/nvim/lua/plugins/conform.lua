@@ -6,14 +6,14 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				sh = { "shfmt" },
 				bash = { "shfmt" },
-				lua = { "stylua" },
 				json = { "prettier" },
 				jsonc = { "prettier" },
-				yaml = { "prettier" },
-				toml = { "taplo" },
+				lua = { "stylua" },
 				markdown = { "prettier" },
+				sh = { "shfmt" },
+				toml = { "taplo" },
+				yaml = { "prettier" },
 			},
 			formatters = {
 				prettier = {
